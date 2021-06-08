@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Rota1 from './Component/Rota1';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route path ="/rota1">
+              <Rota1/>
+          </Route>
+
+          <Route path ="/rota2">
+            <div>
+              <h1>Olá rota 2</h1>     
+            </div>
+          </Route>
+
+          <Route path ="/rota3">
+            <div>
+              <div>
+                <h1>Olá rota 3</h1> 
+              </div>
+            </div>
+          </Route>
+
+          <Route path ="/">
+            <div><h1>Rota padrão</h1></div>
+          </Route>
+
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
