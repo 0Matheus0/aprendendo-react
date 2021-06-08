@@ -7,7 +7,7 @@ const Rota1 = () =>{
     return (
         <div>
 
-            <h1>Olá rota 1</h1>
+            <h1>Olá, essa rota 1</h1>
 
         </div>
     )

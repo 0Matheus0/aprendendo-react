@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Rota1 from './Component/Rota1';
+import Rota2 from './Component/Rota2';
 
 function App() {
   return (
@@ -11,11 +12,7 @@ function App() {
               <Rota1/>
           </Route>
 
-          <Route path ="/rota2">
-            <div>
-              <h1>Olá rota 2</h1>     
-            </div>
-          </Route>
+          <Route path ="/rota2" component = {Rota2}/>
 
           <Route path ="/rota3">
             <div>
@@ -26,7 +23,7 @@ function App() {
           </Route>
 
           <Route path ="/">
-            <div><h1>Rota padrão</h1></div>
+            <div><h1>Essa é a Rota padrão</h1></div>
           </Route>
 
         </Switch>
