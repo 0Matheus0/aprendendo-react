@@ -14,7 +14,7 @@ const Rota3 = () =>{
         else return setStatus("Impar")
 
 
-    })
+    }, [numero])
 
     
     return(
