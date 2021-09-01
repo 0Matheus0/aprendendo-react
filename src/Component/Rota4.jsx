@@ -9,19 +9,21 @@ const Rota4 = (props) => {
   }, []);
 
   const _loadMovies = () => {
-    const getMovies = api.get("");
+    api.get("").then((response)=>{
 
-    console.log(getMovies);
+      //console.log(response.data);
 
-    setFilmes(getMovies.data);
+      response.data.forEach(element => {
+        //console.log(element.show.name)
+        setFilmes(response.data);
+      });
+    });
+
   };
 
   return (
     <div>
       <h1>Olá, Essa é a Rota 4</h1>
-        
-
-
     </div>
   );
 };
