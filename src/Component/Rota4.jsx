@@ -8,14 +8,16 @@ const Rota4 = (props) => {
     _loadMovies();
   }, []);
 
+  //carrega filmes 
   const _loadMovies = () => {
     api.get("").then((response)=>{
 
       //console.log(response.data);
 
-      response.data.forEach(element => {
+      response.data.forEach(element => { //percorre o array e seta em setFilmes
         //console.log(element.show.name)
         setFilmes(response.data);
+    
       });
     });
 
@@ -29,7 +31,7 @@ const Rota4 = (props) => {
           <li key={item.show.id}>
             {item.show.name}
           </li>
-    
+
         )
       }
     </div>
